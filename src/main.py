@@ -6,8 +6,8 @@ from dependencies import mainframe
 import wx
 import pywinstyles
 
-# import u6
-from dependencies import dummy_labjack_u6 as u6
+import u6
+# from dependencies import dummy_labjack_u6 as u6
 import threading
 
 # import LabJackPython as ljud
