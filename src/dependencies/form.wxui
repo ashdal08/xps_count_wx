@@ -1,0 +1,351 @@
+<?xml version="1.0"?>
+<wxUiEditorData
+  data_version="16">
+  <node
+    class="Project"
+    code_preference="Python"
+    dialog_units="0"
+    wxWidgets_version="3.1">
+    <node
+      class="wxFrame"
+      class_name="mainFrame"
+      style="wxDEFAULT_FRAME_STYLE|wxCLOSE_BOX|wxMAXIMIZE_BOX|wxMINIMIZE_BOX"
+      base_file="mainframe"
+      python_file="mainframe"
+      maximum_size="-1,-1"
+      minimum_size="800,600"
+      size="1000,800"
+      window_style="wxFULL_REPAINT_ON_RESIZE">
+      <node
+        class="wxToolBar" />
+      <node
+        class="wxMenuBar" />
+      <node
+        class="wxStatusBar" />
+      <node
+        class="wxPanel"
+        var_name="_panel2"
+        maximum_size="-1,-1"
+        window_style="wxTAB_TRAVERSAL">
+        <node
+          class="wxFlexGridSizer"
+          growablecols="1"
+          flags="wxEXPAND">
+          <node
+            class="wxFlexGridSizer"
+            cols="0"
+            rows="10"
+            var_name="_flex_grid_sizer4"
+            flags="wxEXPAND">
+            <node
+              class="wxNotebook"
+              var_name="modeSelect"
+              flags="wxEXPAND">
+              <node
+                class="BookPage"
+                label="Single Scan"
+                select="1"
+                var_name="single_scan"
+                background_colour="wxSYS_COLOUR_BTNFACE"
+                window_style="wxTAB_TRAVERSAL">
+                <node
+                  class="wxStaticBoxSizer"
+                  label="Measurement Parameters"
+                  var_name="_static_box">
+                  <node
+                    class="wxFlexGridSizer"
+                    var_name="_flex_grid_sizer2"
+                    flags="wxEXPAND">
+                    <node
+                      class="wxStaticText"
+                      label="Start [eV] : "
+                      var_name="static_text"
+                      alignment="wxALIGN_RIGHT"
+                      border_size="10"
+                      borders="wxLEFT|wxRIGHT|wxTOP" />
+                    <node
+                      class="wxSpinCtrlDouble"
+                      inc="0.005"
+                      max="1500"
+                      var_name="singleStarteV" />
+                    <node
+                      class="wxStaticText"
+                      label="End [eV] : "
+                      var_name="static_text2"
+                      alignment="wxALIGN_RIGHT"
+                      border_size="10"
+                      borders="wxLEFT|wxRIGHT|wxTOP" />
+                    <node
+                      class="wxSpinCtrlDouble"
+                      inc="0.005"
+                      max="1500"
+                      var_name="singleEndeV" />
+                    <node
+                      class="wxStaticText"
+                      label="Step width [eV] : "
+                      var_name="static_text3"
+                      alignment="wxALIGN_RIGHT"
+                      border_size="10"
+                      borders="wxLEFT|wxRIGHT|wxTOP" />
+                    <node
+                      class="wxSpinCtrlDouble"
+                      inc="0.005"
+                      initial="0.005"
+                      max="1500"
+                      min="0.005"
+                      var_name="singleStepWidtheV" />
+                    <node
+                      class="wxStaticText"
+                      label="Time per step [s] : "
+                      var_name="static_text4"
+                      alignment="wxALIGN_RIGHT"
+                      border_size="10"
+                      borders="wxLEFT|wxRIGHT|wxTOP" />
+                    <node
+                      class="wxSpinCtrlDouble"
+                      initial="1"
+                      max="1000"
+                      min="1"
+                      var_name="singleTimePerStep" />
+                    <node
+                      class="wxStaticText"
+                      label="No. of passes : "
+                      var_name="static_text5"
+                      alignment="wxALIGN_RIGHT"
+                      border_size="10"
+                      borders="wxLEFT|wxRIGHT|wxTOP" />
+                    <node
+                      class="wxSpinCtrl"
+                      initial="1"
+                      min="1"
+                      var_name="singlePasses" />
+                  </node>
+                </node>
+              </node>
+              <node
+                class="BookPage"
+                label="Batch Scan"
+                var_name="batch_scan"
+                background_colour="wxSYS_COLOUR_BTNFACE"
+                maximum_size="-1,-1"
+                window_style="wxTAB_TRAVERSAL|wxALWAYS_SHOW_SB"
+                flags="wxEXPAND">
+                <node
+                  class="wxStaticBoxSizer"
+                  label="Measurement Parameters"
+                  var_name="_static_box3">
+                  <node
+                    class="wxFlexGridSizer"
+                    cols="1"
+                    var_name="_flex_grid_sizer3"
+                    flags="wxEXPAND">
+                    <node
+                      class="wxGrid"
+                      cell_horiz_alignment="wxALIGN_CENTER"
+                      cell_vert_alignment="wxALIGN_CENTER"
+                      col_label_size="40"
+                      col_label_values="Start [eV]; End [eV]; Step [eV]; s/eV; Passes"
+                      default_col_size="60"
+                      drag_col_size="0"
+                      drag_row_size="0"
+                      native_col_labels="0"
+                      row_label_size="20"
+                      rows="100"
+                      var_name="batchInput"
+                      maximum_size="-1,-1"
+                      minimum_size="-1,-1"
+                      size="-1,100"
+                      window_style="0"
+                      flags="wxEXPAND"
+                      wxEVT_CHAR="myNumValid" />
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node
+              class="wxBoxSizer"
+              orientation="wxVERTICAL"
+              var_name="_box_sizer"
+              flags="wxEXPAND">
+              <node
+                class="wxStaticText"
+                label="Excitation"
+                var_name="static_text13"
+                alignment="wxALIGN_CENTER_HORIZONTAL"
+                borders="wxTOP|wxRIGHT|wxLEFT" />
+              <node
+                class="wxFlexGridSizer"
+                cols="3"
+                var_name="_flex_grid_sizer5"
+                alignment="wxALIGN_CENTER_HORIZONTAL"
+                borders="wxBOTTOM|wxRIGHT|wxLEFT">
+                <node
+                  class="wxStaticText"
+                  label="Al"
+                  var_name="static_text11"
+                  alignment="wxALIGN_CENTER_VERTICAL"
+                  borders="wxBOTTOM|wxRIGHT|wxLEFT" />
+                <node
+                  class="wxSlider"
+                  line_size="10"
+                  maxValue="1"
+                  position="0"
+                  var_name="excitationSelect"
+                  alignment="wxALIGN_CENTER_HORIZONTAL"
+                  borders="wxBOTTOM|wxRIGHT|wxLEFT" />
+                <node
+                  class="wxStaticText"
+                  label="Mg"
+                  var_name="static_text12"
+                  alignment="wxALIGN_CENTER_VERTICAL"
+                  borders="wxBOTTOM|wxRIGHT|wxLEFT" />
+              </node>
+              <node
+                class="wxBoxSizer"
+                var_name="_box_sizer2"
+                alignment="wxALIGN_CENTER_HORIZONTAL">
+                <node
+                  class="wxButton"
+                  label="Start"
+                  var_name="startButton"
+                  wxEVT_BUTTON="startMeasurement" />
+                <node
+                  class="wxButton"
+                  label="Cancel"
+                  var_name="cancelButton"
+                  id="wxID_CANCEL"
+                  wxEVT_BUTTON="interruptionClicked" />
+              </node>
+              <node
+                class="wxButton"
+                label="Stop"
+                var_name="stopButton"
+                id="wxID_STOP"
+                alignment="wxALIGN_CENTER_HORIZONTAL"
+                wxEVT_BUTTON="interruptionClicked" />
+            </node>
+            <node
+              class="wxStaticLine"
+              var_name="_static_line2"
+              size="20,-1"
+              flags="wxEXPAND" />
+            <node
+              class="wxGauge"
+              style="wxGA_SMOOTH"
+              var_name="measProgress"
+              maximum_size="-1,-1"
+              minimum_size="150,-1"
+              flags="wxEXPAND" />
+            <node
+              class="wxBoxSizer"
+              var_name="_box_sizer3"
+              alignment="wxALIGN_CENTER_HORIZONTAL">
+              <node
+                class="wxBoxSizer"
+                orientation="wxVERTICAL"
+                var_name="_box_sizer4">
+                <node
+                  class="wxStaticText"
+                  label="K.E [eV]"
+                  var_name="static_text6"
+                  alignment="wxALIGN_CENTER_HORIZONTAL" />
+                <node
+                  class="wxTextCtrl"
+                  style="wxTE_READONLY|wxTE_CENTER"
+                  var_name="kineticEnergy"
+                  maximum_size="60,-1"
+                  minimum_size="60,-1"
+                  alignment="wxALIGN_CENTER_HORIZONTAL" />
+              </node>
+              <node
+                class="wxBoxSizer"
+                orientation="wxVERTICAL"
+                var_name="_box_sizer5">
+                <node
+                  class="wxStaticText"
+                  label="B.E [eV]"
+                  var_name="static_text7"
+                  alignment="wxALIGN_CENTER_HORIZONTAL" />
+                <node
+                  class="wxTextCtrl"
+                  style="wxTE_READONLY|wxTE_CENTER"
+                  var_name="bindingEnergy"
+                  maximum_size="60,-1"
+                  minimum_size="60,-1"
+                  alignment="wxALIGN_CENTER_HORIZONTAL" />
+              </node>
+              <node
+                class="wxBoxSizer"
+                orientation="wxVERTICAL"
+                var_name="_box_sizer6">
+                <node
+                  class="wxStaticText"
+                  label="Elapsed [min]"
+                  var_name="static_text8"
+                  alignment="wxALIGN_CENTER_HORIZONTAL" />
+                <node
+                  class="wxTextCtrl"
+                  style="wxTE_READONLY|wxTE_CENTER"
+                  var_name="elapsedTime"
+                  maximum_size="60,-1"
+                  minimum_size="60,-1"
+                  alignment="wxALIGN_CENTER_HORIZONTAL" />
+              </node>
+              <node
+                class="wxBoxSizer"
+                orientation="wxVERTICAL"
+                var_name="_box_sizer7">
+                <node
+                  class="wxStaticText"
+                  label="Remaining [min]"
+                  var_name="static_text9"
+                  alignment="wxALIGN_CENTER_HORIZONTAL" />
+                <node
+                  class="wxTextCtrl"
+                  style="wxTE_READONLY|wxTE_CENTER"
+                  var_name="remainingTime"
+                  maximum_size="60,-1"
+                  minimum_size="60,-1"
+                  alignment="wxALIGN_CENTER_HORIZONTAL" />
+              </node>
+            </node>
+            <node
+              class="wxStaticLine"
+              var_name="_static_line3"
+              size="20,-1"
+              flags="wxEXPAND" />
+            <node
+              class="wxStaticText"
+              label="Welcome"
+              var_name="measurementStatus"
+              alignment="wxALIGN_CENTER_HORIZONTAL" />
+            <node
+              class="wxCommandLinkButton"
+              main_label="Restart Plot Server"
+              note="In case the backend plot server has stopped"
+              var_name="btn"
+              wxEVT_BUTTON="startPlotServer" />
+          </node>
+          <node
+            class="wxFlexGridSizer"
+            cols="1"
+            rows="1"
+            var_name="_flex_grid_sizer6"
+            growablecols="0"
+            growablerows="0"
+            flags="wxEXPAND">
+            <node
+              class="wxWebView"
+              var_name="plotView"
+              maximum_size="-1,-1"
+              minimum_size="-1,600"
+              size="-1,-1"
+              window_style="0"
+              flags="wxEXPAND"
+              proportion="1" />
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+</wxUiEditorData>

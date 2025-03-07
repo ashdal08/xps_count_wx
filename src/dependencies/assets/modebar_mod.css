@@ -1,0 +1,6 @@
+div[id^="modebar-"] {
+    display: flex;
+    flex-flow: column wrap;
+    align-content: flex-end;
+    max-height: 100%;
+}
